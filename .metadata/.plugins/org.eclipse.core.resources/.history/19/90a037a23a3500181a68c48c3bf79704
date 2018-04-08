@@ -1,0 +1,23 @@
+/**
+ * \file Cheque.h
+ * \brief
+ * \author etudiant
+ * \date 2018-03-27
+ */
+
+#ifndef CHEQUE_H_
+#define CHEQUE_H_
+#include "Compte.h"   // herite de la classe compte
+/**
+ * \class Cheque
+ * \brief
+ */
+class Cheque: public Compte {
+public:
+	Cheque();
+	virtual ~Cheque ();
+private:
+	void verifieInvariant() const;
+};
+
+#endif /* CHEQUE_H_ */

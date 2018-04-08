@@ -1,0 +1,29 @@
+/**
+ * \file Epargne.cpp
+ * \brief
+ * \author etudiant
+ * \date 2018-03-27
+ */
+
+#include "Epargne.h"
+
+
+Epargne::Epargne(int p_noCompte, double p_tauxInteret, double p_solde,
+		const std::string& p_description) {
+}
+
+double Epargne::calculerInteret() {
+	return p_tauxInteret*p_solde;
+}
+
+std::string Epargne::reqCompteFormate() const {
+	ostringstream os;
+
+}
+
+Compte* Epargne::clone() const {
+	return new Epargne(*this); // Appel du constructeur copie
+}
+
+Epargne::~Epargne() {
+}

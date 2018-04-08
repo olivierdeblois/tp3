@@ -1,0 +1,45 @@
+/**
+ * \file Epargne.cpp
+ * \brief
+ * \author etudiant
+ * \date 2018-03-27
+ */
+
+#include "Epargne.h"
+
+
+Epargne::Epargne(int p_noCompte, double p_tauxInteret, double p_solde,
+		const std::string& p_description): Compte(p_noCompte, p_tauxInteret, p_solde, p_description) {
+
+	PRECONDITION( p_tauxInteret >= 0.1 && p_tauxInteret <= 3.5 );
+
+	INVARIANTS();
+}
+
+double Epargne::calculerInteret() {
+
+	return Compte::reqTauxInteret()*Compte::reqSolde() ;
+}
+
+std::string Epargne::reqCompteFormate() const {
+	ostringstream os;
+	os << "Compte Epargne" << endl;
+	os << "numero: " << Compte::reqNoCompte() << endl;
+	os << "Description: " << Compte::reqDescription() << endl;
+	os << "Date d'ouverture: " << Compte::reqDateOuverture().reqDateFormatee() << endl;
+	os << "Taux d'interet: " << Compte::reqTauxInteret() << endl;
+	os << "Solde: " << Compte::reqSolde() <<"$"<< endl;
+	os << "Interet: " << Compte::reqTauxInteret()*Compte::reqSolde() * 0.01 << "$"<< endl;
+	return os.str();
+}
+
+Compte* Epargne::clone() const {
+	return new Epargne(*this); // Appel du constructeur copie
+}
+
+Epargne::~Epargne() {
+}
+
+void Epargne::verifieInvariant() const {
+	INVARIANT( Compte::reqTauxInteret() >= 0.1 && Compte::reqTauxInteret() <= 3.5 );
+}

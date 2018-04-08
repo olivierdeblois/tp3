@@ -1,0 +1,15 @@
+20:50:02 **** Incremental Build of configuration Debug for project tp3 ****
+make all 
+Building file: ../Compte.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Compte.d" -MT"Compte.o" -o "Compte.o" "../Compte.cpp"
+Finished building: ../Compte.cpp
+ 
+Building target: tp3
+Invoking: GCC C++ Linker
+g++  -o "tp3"  ./Cheque.o ./Client.o ./Compte.o ./ContratException.o ./Date.o ./Epargne.o ./main.o ./validationFormat.o   
+Finished building target: tp3
+ 
+
+20:50:04 Build Finished (took 1s.471ms)
+

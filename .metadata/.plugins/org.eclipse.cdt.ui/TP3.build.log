@@ -1,0 +1,7 @@
+19:43:27 **** Clean-only build of configuration Debug for project TP3 ****
+make clean 
+rm -rf  ./Cheque.o ./Client.o ./Compte.o ./ContratException.o ./Date.o ./Epargne.o ./main.o ./validationFormat.o  ./Cheque.d ./Client.d ./Compte.d ./ContratException.d ./Date.d ./Epargne.d ./main.d ./validationFormat.d  TP3
+ 
+
+19:43:27 Build Finished (took 69ms)
+

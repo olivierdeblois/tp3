@@ -1,0 +1,39 @@
+/**
+ * \file Cheque.cpp
+ * \brief
+ * \author etudiant
+ * \date 2018-03-27
+ */
+
+#include "Cheque.h"
+
+
+
+Cheque::Cheque(int p_noCompte, double p_tauxInteret, double p_solde, const std::string& p_description,
+		int p_nombreTransactions, double p_tauxInteretMinimum): Compte(p_noCompte, p_tauxInteret, p_solde, p_description),
+		m_tauxInteretMinimum(p_tauxInteretMinimum), m_nombreTransactions(p_nombreTransactions) {
+}
+
+double Cheque::reqTauxInteretMinimum() const {
+	return m_tauxInteretMinimum;
+}
+
+int Cheque::reqNombreTransactions() const {
+	return m_nombreTransactions;
+}
+
+void Cheque::asgNombreTransactions(int p_nombreTransactions) {
+	m_nombreTransactions = p_nombreTransactions;
+}
+
+double Cheque::calculerInteret() const {
+}
+
+Cheque::~Cheque() {
+}
+
+std::string Cheque::reqCompteFormate() const {
+}
+
+void Cheque::verifieInvariant() const {
+}
