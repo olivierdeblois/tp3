@@ -1,20 +1,6 @@
-14:17:36 **** Incremental Build of configuration Debug for project CompteEpargneTesteur ****
+20:17:18 **** Incremental Build of configuration Debug for project CompteEpargneTesteur ****
 make all 
-Building file: ../CompteEpargneTesteur.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++1y -I"/home/etudiant/Bureau/TP3/tp3" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CompteEpargneTesteur.d" -MT"CompteEpargneTesteur.o" -o "CompteEpargneTesteur.o" "../CompteEpargneTesteur.cpp"
-Finished building: ../CompteEpargneTesteur.cpp
- 
-Building target: CompteEpargneTesteur
-Invoking: GCC C++ Linker
-g++ -L"/home/etudiant/Bureau/TP3/tp3/Debug" -o "CompteEpargneTesteur"  ./CompteEpargneTesteur.o   -lgtest_main -lgtest -lpthread -ltp3
-./CompteEpargneTesteur.o : Dans la fonction « Epargne_ConstructeurAvecParametresValides_Test::TestBody() » :
-/home/etudiant/Bureau/TP3/CompteEpargneTesteur/Debug/../CompteEpargneTesteur.cpp:21 : référence indéfinie vers « Epargne::Epargne(int, double, double, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) »
-/home/etudiant/Bureau/TP3/CompteEpargneTesteur/Debug/../CompteEpargneTesteur.cpp:22 : référence indéfinie vers « Epargne::~Epargne() »
-/home/etudiant/Bureau/TP3/CompteEpargneTesteur/Debug/../CompteEpargneTesteur.cpp:21 : référence indéfinie vers « Epargne::~Epargne() »
-collect2: error: ld returned 1 exit status
-make: *** [CompteEpargneTesteur] Erreur 1
-makefile:44 : la recette pour la cible « CompteEpargneTesteur » a échouée
+make: rien à faire pour « all ».
 
-14:17:37 Build Finished (took 583ms)
+20:17:19 Build Finished (took 73ms)
 

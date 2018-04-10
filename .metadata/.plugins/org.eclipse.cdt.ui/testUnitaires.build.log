@@ -1,35 +1,6 @@
-15:24:11 **** Incremental Build of configuration Debug for project testUnitaires ****
+21:45:58 **** Incremental Build of configuration Debug for project testUnitaires ****
 make all 
-Building file: ../CompteTesteur.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++1y -I"/home/etudiant/Bureau/TP3/tp3" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CompteTesteur.d" -MT"CompteTesteur.o" -o "CompteTesteur.o" "../CompteTesteur.cpp"
-../CompteTesteur.cpp: In member function ‘virtual void Compte_ConstructeurAvecParametresValides_Test::TestBody()’:
-../CompteTesteur.cpp:24:9: error: cannot declare variable ‘unCompte’ to be of abstract type ‘Compte’
-  Compte unCompte(1234, 3.2, 1500, "description");
-         ^
-In file included from ../CompteTesteur.cpp:10:0:
-/home/etudiant/Bureau/TP3/tp3/Compte.h:20:7: note:   because the following virtual functions are pure within ‘Compte’:
- class Compte {
-       ^
-/home/etudiant/Bureau/TP3/tp3/Compte.h:32:17: note: 	virtual double Compte::calculerInteret() const
-  virtual double calculerInteret() const = 0;
-                 ^
-In file included from /usr/include/gtest/gtest.h:58:0,
-                 from ../CompteTesteur.cpp:8:
-../CompteTesteur.cpp: In member function ‘virtual void Compte_ConstructeurAvecNoCompteNonValides_Test::TestBody()’:
-../CompteTesteur.cpp:34:22: error: cannot declare variable ‘unCompte’ to be of abstract type ‘Compte’
-  ASSERT_THROW(Compte unCompte(-1, 3.2, 1500, "description"), ContratException);
-                      ^
-../CompteTesteur.cpp: In member function ‘virtual void Compte_ConstructeurAvecDescriptionNonValides_Test::TestBody()’:
-../CompteTesteur.cpp:38:22: error: cannot declare variable ‘unCompte’ to be of abstract type ‘Compte’
-  ASSERT_THROW(Compte unCompte(1234, 3.2, 1500, ""), ContratException);
-                      ^
-../CompteTesteur.cpp: At global scope:
-../CompteTesteur.cpp:50:9: error: cannot declare field ‘unCompte::compte’ to be of abstract type ‘Compte’
-  Compte compte;
-         ^
-subdir.mk:18 : la recette pour la cible « CompteTesteur.o » a échouée
-make: *** [CompteTesteur.o] Erreur 1
+make: rien à faire pour « all ».
 
-15:24:11 Build Finished (took 527ms)
+21:45:58 Build Finished (took 96ms)
 

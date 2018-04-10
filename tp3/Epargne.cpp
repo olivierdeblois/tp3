@@ -32,7 +32,7 @@ Epargne::Epargne(int p_noCompte, double p_tauxInteret, double p_solde,
 
 double Epargne::calculerInteret() const {
 
-	return Compte::reqTauxInteret()*Compte::reqSolde() ;
+	return Compte::reqTauxInteret()*Compte::reqSolde()*0.01 ;
 }
 
 /**

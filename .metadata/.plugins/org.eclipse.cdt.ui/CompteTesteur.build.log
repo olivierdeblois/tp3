@@ -1,0 +1,6 @@
+23:04:05 **** Incremental Build of configuration Debug for project CompteTesteur ****
+make all 
+make: rien à faire pour « all ».
+
+23:04:05 Build Finished (took 64ms)
+

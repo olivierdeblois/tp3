@@ -22,7 +22,7 @@ Cheque::Cheque(int p_noCompte, double p_tauxInteret, double p_solde, int p_nombr
 		double p_tauxInteretMinimum, const std::string& p_description): Compte(p_noCompte, p_tauxInteret, p_solde, p_description),
 		 m_nombreTransactions(p_nombreTransactions), m_tauxInteretMinimum(p_tauxInteretMinimum) {
 
-	PRECONDITION( p_nombreTransactions <= 40 && p_tauxInteretMinimum < p_tauxInteret && p_tauxInteretMinimum >= 0.1 );
+	PRECONDITION( p_nombreTransactions <= 40 && p_tauxInteretMinimum <= p_tauxInteret);
 	POSTCONDITION(m_nombreTransactions == p_nombreTransactions && m_tauxInteretMinimum == p_tauxInteretMinimum);
 	INVARIANTS();
 }
@@ -127,4 +127,6 @@ Compte* Cheque::clone() const {
  */
 
 void Cheque::verifieInvariant() const {
+	INVARIANT(m_nombreTransactions <= 40);
+	INVARIANT(m_tauxInteretMinimum <= Compte::reqTauxInteret());
 }

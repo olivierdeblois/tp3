@@ -13,6 +13,7 @@
 #include "Cheque.h" // ajouter pour TP3
 #include "Epargne.h"// ajouter pour TP3
 #include <iostream>
+#include <vector>
 
 namespace banque{
 /**
@@ -22,6 +23,7 @@ namespace banque{
 class Client {
 public:
 	Client(int p_noFolio, const std::string& p_nom, const std::string& p_prenom, const std::string& p_telephone, const util::Date& p_dateDeNaissance);
+	Client(const Client& other);
 	int reqNoFolio() const;
 	const std::string reqNom() const;
 	const std::string reqPrenom() const;
@@ -41,7 +43,7 @@ private:
 	std::string m_prenom;
 	std::string m_telephone;
 	util::Date m_dateDeNaissance;
-	//std::vector<Compte*> m_vComptes;
+	std::vector<Compte*> m_vComptes;
 	void verifieInvariant() const;
 	bool compteEstDejaPresent(int p_noCompte) const;
 };

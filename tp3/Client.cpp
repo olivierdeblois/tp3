@@ -27,7 +27,6 @@ Client::Client(int p_noFolio, const std::string& p_nom, const std::string& p_pre
 	PRECONDITION(p_noFolio >= 1000 && p_noFolio <= 10000);
 	PRECONDITION(util::validerFormatNom(p_nom) && util::validerFormatNom(p_prenom));
 	PRECONDITION(util::validerTelephone(p_telephone));
-	//PRECONDITION(p_annee >= 1970 && p_annee  <= 2037);
 	POSTCONDITION(m_noFolio == p_noFolio && m_nom == p_nom && m_prenom == p_prenom && m_telephone == p_telephone && m_dateDeNaissance == p_dateDeNaissance);
 	INVARIANTS();
 }
@@ -133,28 +132,39 @@ Client::~Client() {
 
 
 
-void Client::ajouterCompte(const Compte& p_nouveauCompte) {       // a completer*******************
-
+void Client::ajouterCompte(const Compte& p_nouveauCompte) {
+	m_vComptes.push_back(p_nouveauCompte.clone());
 }
 
-std::string Client::reqReleves() const {                     // a completer****************
+std::string Client::reqReleves() const {
 	ostringstream os;
+	os << Client::reqClientFormate();
+	for(unsigned int i = 0; i < m_vComptes.size(); i++ ){
+		os << m_vComptes[i]->reqCompteFormate();
+	}
 	return os.str();
 }
 
-bool Client::compteEstDejaPresent(int p_noCompte) const {   // a completer *****************
+bool Client::compteEstDejaPresent(int p_noCompte) const {
 	bool presenceDeCompte = false;
-
+	for(unsigned int i = 0; i < m_vComptes.size(); i++ ){
+		if(m_vComptes[i]->reqNoCompte() == p_noCompte){
+			presenceDeCompte = true;
+	}
+	}
 	return presenceDeCompte;
-}
 
+}
 /**
  * \brief Verifie les invariants de la classe
  */
-
-void Client::verifieInvariant() const {
+void Client::verifieInvariant() const
+{
 	INVARIANT(m_noFolio >= 1000 && m_noFolio <= 10000);
 	INVARIANT(util::validerFormatNom(m_nom) && util::validerFormatNom(m_prenom));
 	INVARIANT(util::validerTelephone(m_telephone));
 }
+
 }
+
+

@@ -1,11 +1,12 @@
-21:09:30 **** Incremental Build of configuration Debug for project CompteChequeTesteur ****
+21:05:43 **** Incremental Build of configuration Debug for project ProgrammePrincial ****
 make all 
-Building target: CompteChequeTesteur
+Building file: ../ProgrammePrincial.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -I"/home/etudiant/Bureau/TP3/tp3" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ProgrammePrincial.d" -MT"ProgrammePrincial.o" -o "ProgrammePrincial.o" "../ProgrammePrincial.cpp"
+Finished building: ../ProgrammePrincial.cpp
+ 
+Building target: ProgrammePrincial
 Invoking: GCC C++ Linker
-g++ -L"/home/etudiant/Bureau/TP3/tp3/Debug" -o "CompteChequeTesteur"  ./CompteChequeTesteur.o   -lgtest_main -ltp3 -lgtest -lpthread
-./CompteChequeTesteur.o : Dans la fonction « Cheque_constructeurAvecParametresValides_Test::TestBody() » :
-/home/etudiant/Bureau/TP3/CompteChequeTesteur/Debug/../CompteChequeTesteur.cpp:13 : référence indéfinie vers « Cheque::Cheque(int, double, double, int, double, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) »
-/home/etudiant/Bureau/TP3/CompteChequeTesteur/Debug/../CompteChequeTesteur.cpp:13 : référence indéfinie vers « Cheque::~Cheque() »
-collect2: error: ld returned 1 exit status
-makefile:44 : la recette pour la cible « CompteChequeTesteur » a échouée
-make: *** [CompteChequeTesteur] Erreur 1
+g++ -L"/home/etudiant/Bureau/TP3/tp3/Debug" -o "ProgrammePrincial"  ./ProgrammePrincial.o   -ltp3
+Finished building target: ProgrammePrincial
+ 

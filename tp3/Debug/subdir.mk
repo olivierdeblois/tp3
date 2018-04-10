@@ -10,7 +10,6 @@ CPP_SRCS += \
 ../ContratException.cpp \
 ../Date.cpp \
 ../Epargne.cpp \
-../main.cpp \
 ../validationFormat.cpp 
 
 OBJS += \
@@ -20,7 +19,6 @@ OBJS += \
 ./ContratException.o \
 ./Date.o \
 ./Epargne.o \
-./main.o \
 ./validationFormat.o 
 
 CPP_DEPS += \
@@ -30,7 +28,6 @@ CPP_DEPS += \
 ./ContratException.d \
 ./Date.d \
 ./Epargne.d \
-./main.d \
 ./validationFormat.d 
 
 
