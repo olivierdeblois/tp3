@@ -39,6 +39,14 @@ int main(){
 	string description;
 	bool tauxInteretValide = false;
 
+	int noCompteEpargne;
+	double tauxInteretEpargne;
+	string descriptionEpargne;
+	bool tauxInteretEpargneValide = false;
+
+	Client client11(1222, "lol","lol", "418 999-9999", util::Date(04,04,1992));
+	cout<< client11.reqDateDeNaissance();
+
 	cout<<"Bienvenue a l'outil client"<<endl;
 	cout<<"----------------------------------------"<<endl;
 
@@ -159,23 +167,23 @@ int main(){
 		}
 
 	}
-	cin.ignore();
+
 	Cheque cheque1(noCompte, tauxInteret, solde, nombreTransactions,tauxInteretMinimum, description);
 //**********************************************************************************************
 	cout<<"Bienvenue a l'outil Compte Epargne"<<endl;
 	cout<<"----------------------------------------"<<endl;
 
-	while(noCompte < 0){
+	while(noCompteEpargne < 0){
 		cout << " Entrez le numero du compte Epargne: ";
-		cin >> noCompte;
-		if (noCompte < 0){
+		cin >> noCompteEpargne;
+		if (noCompteEpargne < 0){
 			cout << "Le numero de compte doit etre positif.";
 		}
 	}
-	while(!tauxInteretValide){
+	while(!tauxInteretEpargneValide){
 		cout << " Entrez le taux d'interet du compte Epargne: ";
-		cin >> tauxInteret;
-		if(tauxInteret >= 0.1 && tauxInteret < 3.5) tauxInteretValide = true;
+		cin >> tauxInteretEpargne;
+		if(tauxInteretEpargne >= 0.1 && tauxInteretEpargne < 3.5) tauxInteretEpargneValide = true;
 		else{
 			cout << "Le taux d'interet est invalide";
 			cout<<endl;
@@ -184,6 +192,16 @@ int main(){
 
 	cout << " Entrez le solde du compte Epargnee: "<<endl;
 	cin >> solde;
+	cin.ignore();
+	while(descriptionEpargne.empty()){
+		cout << "Entrez la description du compte Epargne: ";
+		getline(cin, descriptionEpargne);
+		if(descriptionEpargne.empty()){
+			cout << "La description est invalide.";
+		}
+
+	}
+
 
 	Epargne epargne1(noCompte, tauxInteret, solde);
 //**************************************************************************************

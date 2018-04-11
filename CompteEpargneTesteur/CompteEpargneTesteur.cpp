@@ -23,7 +23,11 @@ TEST(Epargne, constructeurAvecParametresValides){
 	ASSERT_EQ(1000, epargne_test.reqSolde());
 	ASSERT_EQ("description", epargne_test.reqDescription());
 }
+TEST(Eparnge, constructeurAvecParametresParDefaut){
+	Epargne epargne_test(1234, 1.1, 1000);
+	ASSERT_EQ("Epargne", epargne_test.reqDescription());
 
+}
 
 //Cas invalide
 TEST(Epargne, ConstructeurAvecTauxInteretNonValide){

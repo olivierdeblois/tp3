@@ -26,8 +26,9 @@ TEST(Cheque, constructeurAvecParametresValides){
 	ASSERT_EQ("mon cheque", monCheque.reqDescription());
 }
 TEST(Cheque, constructeurAvecParametresParDefaut){
-	Cheque monCheque(1234, 1.1, 1000, 22, 0.2);
+	Cheque monCheque(1234, 1.1, 1000, 22);
 	ASSERT_EQ("Cheque", monCheque.reqDescription());
+	ASSERT_EQ(0.1, monCheque.reqTauxInteretMinimum());
 }
 /**
  * cas invalide

@@ -3,8 +3,8 @@
 	<item value="${workspace_loc:/tp3/Debug}" key="org.eclipse.cdt.utils.ui.controls.FileListControl"/>
 	<item value="Default C++ source template" key="LastUsedSourceTemplate"/>
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration.internal">
-		<item value="227" key="size.height"/>
-		<item value="900" key="size.width"/>
+		<item value="251" key="size.height"/>
+		<item value="894" key="size.width"/>
 	</section>
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
 	</section>

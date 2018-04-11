@@ -1,12 +1,15 @@
-23:22:58 **** Incremental Build of configuration Debug for project ProgrammePrincial ****
+14:25:47 **** Incremental Build of configuration Debug for project CompteEpargneTesteur ****
 make all 
-Building file: ../ProgrammePrincial.cpp
+Building file: ../CompteEpargneTesteur.cpp
 Invoking: GCC C++ Compiler
-g++ -std=c++1y -I"/home/etudiant/Bureau/TP3/tp3" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ProgrammePrincial.d" -MT"ProgrammePrincial.o" -o "ProgrammePrincial.o" "../ProgrammePrincial.cpp"
-Finished building: ../ProgrammePrincial.cpp
+g++ -std=c++1y -I"/home/etudiant/Bureau/TP3/tp3" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CompteEpargneTesteur.d" -MT"CompteEpargneTesteur.o" -o "CompteEpargneTesteur.o" "../CompteEpargneTesteur.cpp"
+Finished building: ../CompteEpargneTesteur.cpp
  
-Building target: ProgrammePrincial
+Building target: CompteEpargneTesteur
 Invoking: GCC C++ Linker
-g++ -L"/home/etudiant/Bureau/TP3/tp3/Debug" -o "ProgrammePrincial"  ./ProgrammePrincial.o   -ltp3
-Finished building target: ProgrammePrincial
+g++ -L"/home/etudiant/Bureau/TP3/tp3/Debug" -o "CompteEpargneTesteur"  ./CompteEpargneTesteur.o   -lgtest_main -lgtest -lpthread -ltp3
+Finished building target: CompteEpargneTesteur
  
+14:25:52 **** Incremental Build of configuration Debug for project CompteEpargneTesteur ****
+make all 
+make: rien à faire pour « all ».

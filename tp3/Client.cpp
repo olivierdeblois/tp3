@@ -72,8 +72,10 @@ const std::string Client::reqTelephone() const {
  */
 
 void Client::asgTelephone(const std::string& p_telephone) {
-
+	PRECONDITION(util::validerTelephone(p_telephone));
 	m_telephone = p_telephone;
+	POSTCONDITION(m_telephone == p_telephone);
+	INVARIANTS();
 }
 
 /**
