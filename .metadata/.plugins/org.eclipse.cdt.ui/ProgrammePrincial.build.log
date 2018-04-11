@@ -1,6 +1,6 @@
-16:39:47 **** Incremental Build of configuration Debug for project ProgrammePrincial ****
+17:16:49 **** Incremental Build of configuration Debug for project ProgrammePrincial ****
 make all 
 make: rien à faire pour « all ».
 
-16:39:48 Build Finished (took 115ms)
+17:16:49 Build Finished (took 71ms)
 

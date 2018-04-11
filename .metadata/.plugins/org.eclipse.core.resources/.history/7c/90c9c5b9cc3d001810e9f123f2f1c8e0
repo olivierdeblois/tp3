@@ -38,7 +38,6 @@ int main(){
 	int nombreTransactions;
 	double tauxInteretMinimum;
 	string description;
-	bool noCompteValide = false;
 	bool tauxInteretValide = false;
 	bool nombreTransactionValide= false;
 	bool tauxInteretMinimumValide = false;
@@ -47,7 +46,6 @@ int main(){
 	double tauxInteretEpargne;
 	string descriptionEpargne;
 	bool tauxInteretEpargneValide = false;
-	bool noCompteEpargneValide = false;
 
 	Client client11(1222, "lol","lol", "418 999-9999", util::Date(04,04,1992));
 	cout<< client11.reqDateDeNaissance();
@@ -130,11 +128,10 @@ int main(){
 
 	cout<<"Bienvenue a l'outil Compte Cheque"<<endl;
 	cout<<"----------------------------------------"<<endl;
-	while(!noCompteValide){
+	while(noCompte < 0){
 		cout << " Entrez le numero du compte cheque: ";
 		cin >> noCompte;
-		if (noCompte > 0) noCompteValide = true;
-		else{
+		if (noCompte < 0){
 			cout << "Le numero de compte doit etre positif.";
 		}
 	}
@@ -154,7 +151,7 @@ int main(){
 	while(!nombreTransactionValide){
 		cout << " Entrez le nombre de transactions du compte cheque: ";
 		cin >> nombreTransactions;
-		if(nombreTransactions > 0 && nombreTransactions <= 40) nombreTransactionValide =true;
+		if(nombreTransactions > 0) nombreTransactionValide =true;
 		else{
 			cout << "Le nombre de transactions est invalide";
 			cout<<endl;
@@ -170,14 +167,14 @@ int main(){
 		}
 	}
 	cin.ignore();
-	while(description.empty()){
+	//while(description.empty()){
 	cout << "Entrez la description du compte cheque: ";
 	getline(cin, description);
-		if(description.empty()){
-			cout << "La description est invalide.";
-		}
+		//if(description.empty()){
+			//cout << "La description est invalide.";
+		//}
 
-	}
+	//}
 
 	Cheque cheque1(noCompte, tauxInteret, solde, nombreTransactions,tauxInteretMinimum, description);
 
@@ -186,11 +183,10 @@ int main(){
 	cout<<"Bienvenue a l'outil Compte Epargne"<<endl;
 	cout<<"----------------------------------------"<<endl;
 
-	while(!noCompteEpargneValide){
+	while(noCompteEpargne < 0){
 		cout << " Entrez le numero du compte Epargne: ";
 		cin >> noCompteEpargne;
-		if (noCompteEpargne > 0) noCompteEpargneValide = true;
-		else{
+		if (noCompteEpargne < 0){
 			cout << "Le numero de compte doit etre positif.";
 		}
 	}
@@ -218,14 +214,13 @@ int main(){
 	}
 
 
-	Epargne epargne1(noCompte, tauxInteret, solde, descriptionEpargne);
+	Epargne epargne1(noCompte, tauxInteret, solde);
 
 //**************************************************************************************
 
 	monclient.ajouterCompte(cheque1);
 	monclient.ajouterCompte(epargne1);
-	cout << endl;
-	cout << "************************************************************" << endl;
+
 	cout << monclient.reqReleves();
 
 	return 0;

@@ -1,15 +1,3 @@
-16:39:45 **** Incremental Build of configuration Debug for project ProgrammePrincial ****
-make all 
-Building file: ../ProgrammePrincial.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++1y -I"/home/etudiant/Bureau/TP3/tp3" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ProgrammePrincial.d" -MT"ProgrammePrincial.o" -o "ProgrammePrincial.o" "../ProgrammePrincial.cpp"
-Finished building: ../ProgrammePrincial.cpp
- 
-Building target: ProgrammePrincial
-Invoking: GCC C++ Linker
-g++ -L"/home/etudiant/Bureau/TP3/tp3/Debug" -o "ProgrammePrincial"  ./ProgrammePrincial.o   -ltp3
-Finished building target: ProgrammePrincial
- 
-16:39:47 **** Incremental Build of configuration Debug for project ProgrammePrincial ****
+17:17:05 **** Incremental Build of configuration Debug for project ClientTesteur ****
 make all 
 make: rien à faire pour « all ».

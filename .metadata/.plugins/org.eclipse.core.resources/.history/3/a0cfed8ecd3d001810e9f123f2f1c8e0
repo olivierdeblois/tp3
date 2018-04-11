@@ -154,7 +154,7 @@ int main(){
 	while(!nombreTransactionValide){
 		cout << " Entrez le nombre de transactions du compte cheque: ";
 		cin >> nombreTransactions;
-		if(nombreTransactions > 0 && nombreTransactions <= 40) nombreTransactionValide =true;
+		if(nombreTransactions > 0) nombreTransactionValide =true;
 		else{
 			cout << "Le nombre de transactions est invalide";
 			cout<<endl;
