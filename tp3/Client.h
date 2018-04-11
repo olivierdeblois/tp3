@@ -23,7 +23,7 @@ namespace banque{
 class Client {
 public:
 	Client(int p_noFolio, const std::string& p_nom, const std::string& p_prenom, const std::string& p_telephone, const util::Date& p_dateDeNaissance);
-	Client(const Client& other);
+	//Client(const Client& other);
 	int reqNoFolio() const;
 	const std::string reqNom() const;
 	const std::string reqPrenom() const;

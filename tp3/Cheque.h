@@ -20,7 +20,7 @@ public:
 	int reqNombreTransactions() const;
 	void asgNombreTransactions (int p_nombreTransactions);
 	virtual double calculerInteret() const;
-	std::string reqCompteFormate() const;
+	virtual std::string reqCompteFormate() const;
 	virtual Compte* clone() const;
 	virtual ~Cheque ();
 

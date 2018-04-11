@@ -1,6 +1,6 @@
-20:07:36 **** Incremental Build of configuration Debug for project CompteChequeTesteur ****
+20:06:07 **** Incremental Build of configuration Debug for project CompteChequeTesteur ****
 make all 
 make: rien à faire pour « all ».
 
-20:07:36 Build Finished (took 76ms)
+20:06:08 Build Finished (took 68ms)
 

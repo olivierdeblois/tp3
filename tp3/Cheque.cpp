@@ -105,12 +105,6 @@ std::string Cheque::reqCompteFormate() const {
 	os << "nombre de transactions: " << m_nombreTransactions << endl;
 	os << "Taux d'interet minimum: " <<  m_tauxInteretMinimum << endl;
 	os << "Interet: " << calculerInteret() <<"$" << endl;
-	//if (Compte::reqSolde() < 0){
-	//	os << "Interet: " << Cheque::calculerInteret()*Compte::reqSolde()*-0.01 << "$"<< endl; // -0.01 car le compte est en soufrance (-) et le taux d interet est en %
-	//}
-	//else{
-	//	os << "Interet: 0$"<< endl;
-	//}
 	return os.str();
 }
 

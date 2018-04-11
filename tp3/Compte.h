@@ -28,9 +28,9 @@ public:
 	void asgTauxInteret(double p_tauxInteret);
 	void asgSolde(double p_solde);
 	void asgDescription(const std::string& p_description);
-	std::string reqCompteFormate() const;
+	virtual std::string reqCompteFormate() const;
 	virtual double calculerInteret() const = 0;
-	virtual Compte* clone() const;
+	virtual Compte* clone() const = 0;
 	virtual ~Compte ();
 private:
 	int m_noCompte; //(doit être positif)

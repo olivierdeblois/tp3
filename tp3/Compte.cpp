@@ -25,9 +25,7 @@ Compte::Compte(int p_noCompte, double p_tauxInteret, double p_solde,
 	INVARIANTS();
 }
 
-Compte* Compte::clone() const {
-	return 0;                     // *********************** a completer************************
-}
+
 
 /**
  * \brief un destructeur pour l'objet compte

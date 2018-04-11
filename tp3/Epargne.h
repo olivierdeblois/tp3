@@ -19,7 +19,7 @@ class Epargne: public Compte {
 public:
 	Epargne(int p_noCompte, double p_tauxInteret, double p_solde, const std::string& p_description="Epargne");
 	virtual double calculerInteret() const;
-	std::string reqCompteFormate() const;
+	virtual std::string reqCompteFormate() const;
 	virtual Compte* clone() const;
 	virtual ~Epargne ();
 private:

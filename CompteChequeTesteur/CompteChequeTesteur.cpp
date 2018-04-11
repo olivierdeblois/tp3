@@ -14,6 +14,7 @@
  * 		Cas invalides:
  * 			nobre de transactions > 0
  * 			relation d'ordre taux interet minimum et taux interet non respectee
+ * 		Constructeur avec parametres par defaut
  */
 TEST(Cheque, constructeurAvecParametresValides){
 	Cheque monCheque(1234, 1.1, 1000, 22, 0.2, "mon cheque");
@@ -24,13 +25,21 @@ TEST(Cheque, constructeurAvecParametresValides){
 	ASSERT_EQ(0.2, monCheque.reqTauxInteretMinimum());
 	ASSERT_EQ("mon cheque", monCheque.reqDescription());
 }
-//Cas invalide
+TEST(Cheque, constructeurAvecParametresParDefaut){
+	Cheque monCheque(1234, 1.1, 1000, 22, 0.2);
+	ASSERT_EQ("Cheque", monCheque.reqDescription());
+}
+/**
+ * cas invalide
+ */
 TEST(Compte, ConstructeurAvecNombreDeTransactionSNonValide){    // test le nombre de transaction > 40
 	ASSERT_THROW(Cheque monCheque(1234, 1.1, 1000, 44, 0.2, "mon cheque"), PreconditionException);
 }
 
 
-//Cas invalide
+/**
+ * cas invalide
+ */
 TEST(Compte, ConstructeurAvecTauxInteretMinimumNonValides){    // test le taux d'interet minimum > Taux d'interet
 	ASSERT_THROW(Cheque monCheque(1234, 1.1, 1000, 22, 2.0, "mon cheque"), PreconditionException);
 }
@@ -55,13 +64,17 @@ TEST_F(monCheque, reqTauxInteretMinimum){
 	ASSERT_EQ(0.2, cheque.reqTauxInteretMinimum());
 }
 
-// asg valide
+/**
+ * cas invalide
+ */
 TEST_F(monCheque, asgNombreTransactions){
 	cheque.asgNombreTransactions(33);
 	ASSERT_EQ(33, cheque.reqNombreTransactions());
 }
 
-//asg NonValide
+/**
+ * cas invalide
+ */
 TEST_F(monCheque, asgNombreTrasactionsInvalide){
 	ASSERT_THROW(cheque.asgNombreTransactions(44), PreconditionException);
 }
@@ -93,3 +106,5 @@ TEST_F(monCheque, reqCompteFormate){
 	string str = ss.str();
 	ASSERT_EQ("Compte Cheque\nnumero: 1234\nDescription: mon cheque\nDate d'ouverture: "+ cheque.reqDateOuverture().reqDateFormatee() +"\nTaux d'interet: 1.1\nSolde: -1000$\nnombre de transactions: 22\nTaux d'interet minimum: 0.2\nInteret: " + str + "$\n" , cheque.reqCompteFormate());
 }
+
+

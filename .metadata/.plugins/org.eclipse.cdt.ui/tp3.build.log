@@ -1,6 +1,16 @@
-20:15:48 **** Incremental Build of configuration Debug for project tp3 ****
+22:29:33 **** Incremental Build of configuration Debug for project tp3 ****
 make all 
-make: rien à faire pour « all ».
+Building file: ../Client.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Client.d" -MT"Client.o" -o "Client.o" "../Client.cpp"
+Finished building: ../Client.cpp
+ 
+Building target: libtp3.a
+Invoking: GCC Archiver
+ar -r  "libtp3.a"  ./Cheque.o ./Client.o ./Compte.o ./ContratException.o ./Date.o ./Epargne.o ./validationFormat.o   
+ar: création de libtp3.a
+Finished building target: libtp3.a
+ 
 
-20:15:48 Build Finished (took 73ms)
+22:29:34 Build Finished (took 840ms)
 

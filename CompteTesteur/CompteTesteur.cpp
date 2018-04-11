@@ -9,6 +9,7 @@
 
 #include "Compte.h"
 #include<iostream>
+#include <sstream>
 using namespace std;
 
 
@@ -27,6 +28,11 @@ public:
 	}
 	;
 	virtual double calculerInteret() const
+	{
+		return 0;
+	}
+	;
+	virtual  Compte* clone() const
 	{
 		return 0;
 	}
@@ -53,11 +59,11 @@ TEST(Compte, ConstructeurAvecParametresValides){ // test un format valide de com
 }
 //Cas invalide
 TEST(Compte, ConstructeurAvecNoCompteNonValides){    // test le numero de compte < que 0
-	ASSERT_THROW(CompteDeTest unCompte(-1, 3.2, 1500, "description"), ContratException);
+	ASSERT_THROW(CompteDeTest unCompte(-1, 3.2, 1500, "description"), PreconditionException);
 }
 //Cas invalide
 TEST(Compte, ConstructeurAvecDescriptionNonValides){  // test la description vide
-	ASSERT_THROW(CompteDeTest unCompte(1234, 3.2, 1500, ""), ContratException);
+	ASSERT_THROW(CompteDeTest unCompte(1234, 3.2, 1500, ""), PreconditionException);
 }
 
 /**
