@@ -39,6 +39,7 @@ public:
 	Client client;
 };
 
+
 TEST_F(unClient, reqNoFolio){
 	ASSERT_EQ(1234, client.reqNoFolio());
 }
@@ -91,6 +92,13 @@ TEST_F(unClient, OperatorEgualite){
 	ASSERT_FALSE(client1.operator ==(client3));
 }
 
+TEST_F(unClient, ajouterCompte){
+	Epargne epargne1(1234, 1.1, 1000);
+	client.ajouterCompte(epargne1);
+	ASSERT_EQ("Client numero de folio :1234\nDeblois Olivier\nDate de naissance : Lundi le 04 mai 1992\n418 999-9999\nCompte Epargne\n"
+			"numero: 1234\nDescription: Epargne\nDate d'ouverture: " + epargne1.reqDateOuverture().reqDateFormatee() + "\nTaux d'interet: 1.1\nSolde: 1000$\n"
+			"Interet: 11$\n", client.reqReleves());
+}
 
 
 

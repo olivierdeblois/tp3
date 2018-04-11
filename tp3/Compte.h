@@ -32,7 +32,7 @@ public:
 	virtual double calculerInteret() const = 0;
 	virtual Compte* clone() const = 0;
 	virtual ~Compte ();
-private:
+protected:
 	int m_noCompte; //(doit être positif)
 	double m_tauxInteret;
 	double m_solde;

@@ -10,6 +10,7 @@
 using namespace std;
 using namespace util;
 using namespace banque;
+
 int main(){
 	bool validiteFolio=false;
 	bool validitePrenom=false;
@@ -38,6 +39,7 @@ int main(){
 	double tauxInteretMinimum;
 	string description;
 	bool tauxInteretValide = false;
+	bool nombreTransactionValide= false;
 
 	int noCompteEpargne;
 	double tauxInteretEpargne;
@@ -105,11 +107,11 @@ int main(){
 	cout << "Date de Naissance du CLient: " << endl;
 
 	while(!validiteDateNaissance){
-		cout << "Entrez le jour de la date de naissance: ";
+		cout << "Entrez le jour de la date de naissance format(jj): ";
 		cin >> jour;
-		cout << "Entrez le mois de la date de naissance: ";
+		cout << "Entrez le mois de la date de naissance format(mm): ";
 		cin >> mois;
-		cout << "Entrez l'annee de la date de naissance: ";
+		cout << "Entrez l'annee de la date de naissance format(aaaa): ";
 		cin >> annee;
 
 		if (Date::validerDate(jour,mois,annee)) validiteDateNaissance = true;
@@ -120,7 +122,9 @@ int main(){
 
 	}
 	Client monclient(noFolio, nom, prenom, telephone, util::Date(jour, mois, annee));
+
 //**************************************************************************************
+
 	cout<<"Bienvenue a l'outil Compte Cheque"<<endl;
 	cout<<"----------------------------------------"<<endl;
 	while(noCompte < 0){
@@ -142,10 +146,12 @@ int main(){
 
 	cout << " Entrez le solde du compte cheque: "<<endl;
 	cin >> solde;
-	while(nombreTransactions < 0){
+
+	while(!nombreTransactionValide){
 		cout << " Entrez le nombre de transactions du compte cheque: ";
 		cin >> nombreTransactions;
-		if(nombreTransactions < 0){
+		if(nombreTransactions > 0) nombreTransactionValide =true;
+		else{
 			cout << "Le nombre de transactions est invalide";
 			cout<<endl;
 		}
@@ -169,7 +175,9 @@ int main(){
 	}
 
 	Cheque cheque1(noCompte, tauxInteret, solde, nombreTransactions,tauxInteretMinimum, description);
+
 //**********************************************************************************************
+
 	cout<<"Bienvenue a l'outil Compte Epargne"<<endl;
 	cout<<"----------------------------------------"<<endl;
 
@@ -192,6 +200,7 @@ int main(){
 
 	cout << " Entrez le solde du compte Epargnee: "<<endl;
 	cin >> solde;
+
 	cin.ignore();
 	while(descriptionEpargne.empty()){
 		cout << "Entrez la description du compte Epargne: ";
@@ -204,7 +213,9 @@ int main(){
 
 
 	Epargne epargne1(noCompte, tauxInteret, solde);
+
 //**************************************************************************************
+
 	monclient.ajouterCompte(cheque1);
 	monclient.ajouterCompte(epargne1);
 

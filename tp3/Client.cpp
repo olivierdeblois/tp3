@@ -32,6 +32,16 @@ Client::Client(int p_noFolio, const std::string& p_nom, const std::string& p_pre
 }
 
 /**
+ * \brief un destructeur pour l'objet Client
+ */
+
+Client::~Client() {
+	for (unsigned int i = 0; i < m_vComptes.size(); i++){
+		m_vComptes[i] -> ~Compte();
+	}
+}
+
+/**
  * \brief Acceseur pour le numero de folio
  * \return m_noFolio le numero de folio de l'objet
  */
@@ -125,12 +135,7 @@ const util::Date Client::reqDateDeNaissance() const {
 	return m_dateDeNaissance;
 }
 
-/**
- * \brief un destructeur pour l'objet Client
- */
 
-Client::~Client() {
-}
 
 /**
  * \brief une fonction d'ajout de comptes pour l'objet Client
@@ -147,12 +152,17 @@ void Client::ajouterCompte(const Compte& p_nouveauCompte) {
 
 std::string Client::reqReleves() const {
 	ostringstream os;
-	os << Client::reqClientFormate();
+	os << reqClientFormate();
 	for(unsigned int i = 0; i < m_vComptes.size(); i++ ){
 		os << m_vComptes[i]->reqCompteFormate();
 	}
 	return os.str();
 }
+
+/**
+ * \brief une fonction qui verrifie si un compte est deja present avec le parametre noCompte (le numero du compte)
+ * \return un bool vrai ou faux
+ */
 
 bool Client::compteEstDejaPresent(int p_noCompte) const {
 	bool presenceDeCompte = false;

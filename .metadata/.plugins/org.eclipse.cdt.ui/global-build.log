@@ -1,15 +1,15 @@
-14:59:16 **** Incremental Build of configuration Debug for project ClientTesteur ****
+16:39:45 **** Incremental Build of configuration Debug for project ProgrammePrincial ****
 make all 
-Building file: ../ClientTesteur.cpp
+Building file: ../ProgrammePrincial.cpp
 Invoking: GCC C++ Compiler
-g++ -std=c++1y -I"/home/etudiant/Bureau/TP3/tp3" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ClientTesteur.d" -MT"ClientTesteur.o" -o "ClientTesteur.o" "../ClientTesteur.cpp"
-Finished building: ../ClientTesteur.cpp
+g++ -std=c++1y -I"/home/etudiant/Bureau/TP3/tp3" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ProgrammePrincial.d" -MT"ProgrammePrincial.o" -o "ProgrammePrincial.o" "../ProgrammePrincial.cpp"
+Finished building: ../ProgrammePrincial.cpp
  
-Building target: ClientTesteur
+Building target: ProgrammePrincial
 Invoking: GCC C++ Linker
-g++ -L"/home/etudiant/Bureau/TP3/tp3/Debug" -o "ClientTesteur"  ./ClientTesteur.o   -lgtest_main -lgtest -lpthread -ltp3
-Finished building target: ClientTesteur
+g++ -L"/home/etudiant/Bureau/TP3/tp3/Debug" -o "ProgrammePrincial"  ./ProgrammePrincial.o   -ltp3
+Finished building target: ProgrammePrincial
  
-14:59:18 **** Incremental Build of configuration Debug for project ClientTesteur ****
+16:39:47 **** Incremental Build of configuration Debug for project ProgrammePrincial ****
 make all 
 make: rien à faire pour « all ».
