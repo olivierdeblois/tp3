@@ -76,8 +76,20 @@ TEST_F(unClient, reqReleves){
 	ASSERT_EQ("Client numero de folio :1234\nDeblois Olivier\nDate de naissance : Lundi le 04 mai 1992\n418 999-9999\n", client.reqReleves());
 }
 
+TEST_F(unClient, OperatorOrdeDeGrandeur){
+	Client client1(1234, "Deblois", "Olivier", "418 999-9999", util::Date(4,5,1992));
+	Client client2(1235, "Ouelette", "Nicola", "418 998-8888", util::Date(8,3,1994));
+	ASSERT_TRUE(client1.operator <(client2));
+	ASSERT_FALSE(client2.operator <(client1));
+}
 
-
+TEST_F(unClient, OperatorEgualite){
+	Client client1(1234, "Deblois", "Olivier", "418 999-9999", util::Date(4,5,1992));
+	Client client2(1234, "Deblois", "Olivier", "418 999-9999", util::Date(4,5,1992));
+	Client client3(1235, "Ouelette", "Nicola", "418 998-8888", util::Date(8,3,1994));
+	ASSERT_TRUE(client1.operator ==(client2));
+	ASSERT_FALSE(client1.operator ==(client3));
+}
 
 
 

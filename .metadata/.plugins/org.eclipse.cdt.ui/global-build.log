@@ -1,15 +1,15 @@
-14:25:47 **** Incremental Build of configuration Debug for project CompteEpargneTesteur ****
+14:59:16 **** Incremental Build of configuration Debug for project ClientTesteur ****
 make all 
-Building file: ../CompteEpargneTesteur.cpp
+Building file: ../ClientTesteur.cpp
 Invoking: GCC C++ Compiler
-g++ -std=c++1y -I"/home/etudiant/Bureau/TP3/tp3" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CompteEpargneTesteur.d" -MT"CompteEpargneTesteur.o" -o "CompteEpargneTesteur.o" "../CompteEpargneTesteur.cpp"
-Finished building: ../CompteEpargneTesteur.cpp
+g++ -std=c++1y -I"/home/etudiant/Bureau/TP3/tp3" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ClientTesteur.d" -MT"ClientTesteur.o" -o "ClientTesteur.o" "../ClientTesteur.cpp"
+Finished building: ../ClientTesteur.cpp
  
-Building target: CompteEpargneTesteur
+Building target: ClientTesteur
 Invoking: GCC C++ Linker
-g++ -L"/home/etudiant/Bureau/TP3/tp3/Debug" -o "CompteEpargneTesteur"  ./CompteEpargneTesteur.o   -lgtest_main -lgtest -lpthread -ltp3
-Finished building target: CompteEpargneTesteur
+g++ -L"/home/etudiant/Bureau/TP3/tp3/Debug" -o "ClientTesteur"  ./ClientTesteur.o   -lgtest_main -lgtest -lpthread -ltp3
+Finished building target: ClientTesteur
  
-14:25:52 **** Incremental Build of configuration Debug for project CompteEpargneTesteur ****
+14:59:18 **** Incremental Build of configuration Debug for project ClientTesteur ****
 make all 
 make: rien à faire pour « all ».
