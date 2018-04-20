@@ -80,6 +80,7 @@ const util::Date Compte::reqDateOuverture() const {
 
 /**
  * \brief Mutateur pour la taux d'interet, modifie le taux d'interet
+ * \param[in] p_tauxInteret , le nouveau taux d'interet du compte
  */
 
 void Compte::asgTauxInteret(double p_tauxInteret) {
@@ -88,6 +89,7 @@ void Compte::asgTauxInteret(double p_tauxInteret) {
 
 /**
  * \brief Mutateur pour le solde, modifie le solde du compte
+ * \param[in] p_solde, le nouveau solde du compte
  */
 
 void Compte::asgSolde(double p_solde) {
@@ -96,6 +98,7 @@ void Compte::asgSolde(double p_solde) {
 
 /**
  * \brief Mutateur pour la description, modifie la description du compte
+ * \param[in] p_description, la nouvelle description du compte
  */
 
 void Compte::asgDescription(const std::string& p_description) {

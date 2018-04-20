@@ -32,7 +32,7 @@ Client::Client(int p_noFolio, const std::string& p_nom, const std::string& p_pre
 }
 
 /**
- * \brief un destructeur pour l'objet Client
+ * \brief un destructeur pour l'objet Client et tous ses comptes
  */
 
 Client::~Client() {
@@ -78,7 +78,8 @@ const std::string Client::reqTelephone() const {
 }
 
 /**
- * \brief Mutateur pour numero de telephone, modifie le numero de telephone
+ * \brief Mutateur pour numero de telephone modifie numero de telephone
+ * \param[in] p_telephone
  */
 
 void Client::asgTelephone(const std::string& p_telephone) {
@@ -104,8 +105,9 @@ std::string Client::reqClientFormate() const {
 }
 
 /**
- * \brief Retourne la comparaison entre deux objets client
- * \return un bool
+ * \brief Retourne la comparaison entre deux objets client et verefie s'il sont pareil
+ * \param[in] p_client un objet client
+ * \return un bool Vrai ou Faux
  */
 
 bool Client::operator ==(const Client& p_client) const{
@@ -118,8 +120,9 @@ bool Client::operator ==(const Client& p_client) const{
 }
 
 /**
- * \brief Retourne une comparaison entre deux objet client
- * \return un bool
+ * \brief Retourne une comparaison entre deux objet client, verifie si le client sourve a un numero de folio plus petit que le client en parametre
+ * \param[in] p_client, un objet client
+ * \return un bool, Vrai ou Faux
  */
 
 bool Client::operator <(const Client& p_client) const{
@@ -142,7 +145,9 @@ const util::Date Client::reqDateDeNaissance() const {
  */
 
 void Client::ajouterCompte(const Compte& p_nouveauCompte) {
+	if(!(compteEstDejaPresent(p_nouveauCompte.reqNoCompte()))){
 	m_vComptes.push_back(p_nouveauCompte.clone());
+	}
 }
 
 /**
@@ -161,6 +166,7 @@ std::string Client::reqReleves() const {
 
 /**
  * \brief une fonction qui verrifie si un compte est deja present avec le parametre noCompte (le numero du compte)
+ * \param[in] p_noCompte, le numero de compte du client
  * \return un bool vrai ou faux
  */
 

@@ -1,7 +1,7 @@
 /**
  * \file Epargne.cpp
  * \brief Implementation de la classe Epargne derivee de la classe compte
- * \author etudiant
+ * \author Olivier Deblois
  * \date 2018-03-27
  */
 
@@ -21,8 +21,7 @@ Epargne::Epargne(int p_noCompte, double p_tauxInteret, double p_solde,
 		const std::string& p_description): Compte(p_noCompte, p_tauxInteret, p_solde, p_description) {
 
 	PRECONDITION( p_tauxInteret >= 0.1 && p_tauxInteret <= 3.5 );
-	// LES POSTCONDITION SONT DETERMINER DANS LA CLASSE COMPTE ?
-	//INVARIANTS();
+
 }
 
 /**

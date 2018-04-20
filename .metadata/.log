@@ -1159,3 +1159,25 @@ Caused by: java.lang.IllegalArgumentException: Index out of bounds
 	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
 	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
 	... 23 more
+!SESSION 2018-04-11 21:57:43.458 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_111
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=fr_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -data .
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-04-11 21:58:16.290
+!MESSAGE Indexed 'ClientTesteur' (1 sources, 243 headers) in 16,2 sec: 40 796 declarations; 59 672 references; 0 unresolved inclusions; 4 syntax errors; 19 unresolved names (0,019 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-04-11 21:58:25.155
+!MESSAGE Indexed 'CompteChequeTesteur' (1 sources, 235 headers) in 8,84 sec: 40 236 declarations; 57 568 references; 0 unresolved inclusions; 4 syntax errors; 19 unresolved names (0,019 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-04-11 21:58:33.138
+!MESSAGE Indexed 'CompteEpargneTesteur' (1 sources, 235 headers) in 7,88 sec: 40 135 declarations; 56 805 references; 0 unresolved inclusions; 4 syntax errors; 19 unresolved names (0,02 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-04-11 21:58:36.167
+!MESSAGE Indexed 'ProgrammePrincial' (1 sources, 170 headers) in 3,01 sec: 15 114 declarations; 26 723 references; 0 unresolved inclusions; 4 syntax errors; 19 unresolved names (0,045 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-04-11 21:58:39.799
+!MESSAGE Indexed 'tp3' (7 sources, 171 headers) in 3,57 sec: 15 304 declarations; 27 622 references; 0 unresolved inclusions; 4 syntax errors; 56 unresolved names (0,13 %)

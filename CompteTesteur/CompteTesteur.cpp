@@ -1,7 +1,7 @@
 /**
  * \file CompteTesteur.cpp
  * \brief
- * \author etudiant
+ * \author Olivier Deblois
  * \date 2018-03-30
  */
 

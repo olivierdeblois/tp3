@@ -1,7 +1,7 @@
 /**
  * \file Cheque.h
  * \brief Interface de la classe cheque derivee de la classe compte
- * \author etudiant
+ * \author Olivier Deblois
  * \date 2018-03-27
  */
 

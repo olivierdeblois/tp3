@@ -100,6 +100,14 @@ TEST_F(unClient, ajouterCompte){
 			"Interet: 11$\n", client.reqReleves());
 }
 
-
+TEST_F(unClient, ajouterCompteInvalide){
+	Epargne epargne1(1234, 1.1, 1000);
+	Cheque cheque1(1234, 1.1, 1000, 22, 0.2, "mon cheque");
+	client.ajouterCompte(epargne1);
+	client.ajouterCompte(cheque1);
+	ASSERT_EQ("Client numero de folio :1234\nDeblois Olivier\nDate de naissance : Lundi le 04 mai 1992\n418 999-9999\nCompte Epargne\n"
+			"numero: 1234\nDescription: Epargne\nDate d'ouverture: " + epargne1.reqDateOuverture().reqDateFormatee() + "\nTaux d'interet: 1.1\nSolde: 1000$\n"
+			"Interet: 11$\n", client.reqReleves());
+}
 
 

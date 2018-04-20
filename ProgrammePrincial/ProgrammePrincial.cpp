@@ -6,12 +6,15 @@
  */
 #include "Client.h"
 #include "validationFormat.h"
-#include <stdlib.h>
 using namespace std;
 using namespace util;
 using namespace banque;
 
 int main(){
+
+
+	//variable pour l'outil client
+
 	bool validiteFolio=false;
 	bool validitePrenom=false;
 	bool validiteNom=false;
@@ -22,15 +25,12 @@ int main(){
 	string telephone;
 	string nouveauTelephone;
 	int noFolio;
-
-	string strJour;
-	string strMois;
-	string strAnnee;
 	long jour = 01;
 	long mois = 01;
 	long annee = 1970;
-
 	string dateNaissance;
+
+	 // variables pour l'outil compte cheque
 
 	int noCompte;
 	double tauxInteret;
@@ -43,14 +43,15 @@ int main(){
 	bool nombreTransactionValide= false;
 	bool tauxInteretMinimumValide = false;
 
+	 //variable pour l'outil compte epargne
+
+	double soldeEpargne;
 	int noCompteEpargne;
 	double tauxInteretEpargne;
 	string descriptionEpargne;
 	bool tauxInteretEpargneValide = false;
 	bool noCompteEpargneValide = false;
 
-	Client client11(1222, "lol","lol", "418 999-9999", util::Date(04,04,1992));
-	cout<< client11.reqDateDeNaissance();
 
 	cout<<"Bienvenue a l'outil client"<<endl;
 	cout<<"----------------------------------------"<<endl;
@@ -205,7 +206,7 @@ int main(){
 	}
 
 	cout << " Entrez le solde du compte Epargnee: "<<endl;
-	cin >> solde;
+	cin >> soldeEpargne;
 
 	cin.ignore();
 	while(descriptionEpargne.empty()){
@@ -218,7 +219,7 @@ int main(){
 	}
 
 
-	Epargne epargne1(noCompte, tauxInteret, solde, descriptionEpargne);
+	Epargne epargne1(noCompteEpargne, tauxInteretEpargne, soldeEpargne, descriptionEpargne);
 
 //**************************************************************************************
 
